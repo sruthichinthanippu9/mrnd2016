@@ -1,0 +1,118 @@
+#include<stdio.h>
+void Insertion_of_string_between_braces(char  s[],char  a[],int  i);
+int  main()
+{
+  char  s[20],a[20];
+  int  i;
+  printf("enter the string");
+  scanf("%s",s);
+  printf("enter  the   string  a");
+  scanf("%s",a);
+  for(i=0;s[i]!='\0';i++);
+  
+  if(i%2==0)
+  Insertion_of_string_between_braces(s,a,i-1);
+  else
+    printf("not  oa properstring");
+  return 0;
+}
+void  Insertion_of_string_between_braces(char  s[],char  a[],int i)
+{
+  int  j,k,f=0;
+  
+  for(j=0,k=i;j<=k;j++,k--)
+  {
+     switch(s[j])
+     {
+       case  '{':
+                  if(s[k]=='}')
+                  f=1;
+                  else
+                  f=0;
+                  break; 
+      case    '}':
+                 if(s[k]=='{')
+                  f=1;
+                 else
+                  case    '}':
+                 if(s[k]=='{')
+                  f=1;
+                 else
+                  f=0;
+                  break;
+      case     '[':
+                 if(s[k]==']')
+                 f=1;
+                 else
+                 f=0;
+                 break;
+     case      ']':
+                    if(s[k]=='[')
+                    f=1;
+                    else
+                    f=0;
+                    break;
+     case       '(':
+                    if(s[k]==')')
+                    f=1;
+                    else
+                    f=0;
+                    break;
+        case        ')':
+                   if(s[k]=='(')
+                   f=1;
+                   else
+                   f=0;
+                   break;
+     
+     
+                   f=0;
+                   break;
+     case        '"':
+                    if(s[k]=='"')
+                    f=1;
+                    else
+                    f=0;
+                    break;
+     case        '<':
+                    if(s[k]=='>')
+                    f=1;
+                    else
+                    f=0;
+                    break;
+    case        '<':
+                    if(s[k]=='>')
+                    f=1;
+                    else
+                    f=0;
+                    break;
+
+    break;
+  }
+  if(f==0)
+    printf("no")
+ else
+    for(j=0;s[j]!='\0';j++)
+    {
+         if(j==(i%2))
+         {
+          printf("%c",s[j]);
+          printf("%s",a);
+         }
+         else
+
+          printf("%c",s[j]);
+    }
+
+}
+
+
+
+
+
+
+
+
+      
+
+

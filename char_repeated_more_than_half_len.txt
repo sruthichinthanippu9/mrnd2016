@@ -1,0 +1,34 @@
+#include<stdio.h>
+int Char_repeat_len_n/2(char  s[]);
+int  main()
+{
+  char  s[20];
+  printf("enter the string");
+  scanf("%s",s);
+ 
+  Char_repeat_len_n/2(s);
+  
+   return 0;
+}
+int Char_repeat_len_n/2(char s[])
+{
+  int a[255],i,l;
+  for(i=0;i<255;i++)
+      a[i]=0;
+  for(i=0;s[i]!='\0';i++);
+  l=i/2;
+  
+  for(i=0;s[i]!='\0';i++)
+  {
+ 
+    a[s[i]]=a[s[i]]+1;
+    if(a[s[i]]>l)
+    {
+      printf("%c",s[i]);
+      a[s[i]]=0;
+    }  
+  }      
+    
+  
+}  
+    

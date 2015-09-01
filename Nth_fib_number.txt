@@ -1,0 +1,41 @@
+
+#include<stdio.h>
+void Nth_fibonacci_number(int f1,int f2,int count);
+void main()
+{
+  int f1=0,f2=1,count=2;
+  printf("enter the value of which fibonacci series do you want");
+  scanf("%d",&n);
+  if(n<=0) 
+   printf("invalid");
+  else
+  
+  Nth_fibonacci_number(int f1,int f2,int count);
+}
+ void Nth_fibonacci_number(int f1,int f2,
+  {
+     if(n==1)
+       printf("0");
+     else if(n==2)
+       printf("1");
+     else if(n>2)
+     {
+       while(1)
+       {
+         if(n==count)
+         {
+            printf("%d",f3);
+            break;
+         }
+         f3=f1+f2;
+         f1=f2;
+         f2=f3;
+         count++;
+       }
+      }
+   }
+
+ 
+        
+ 
+   

@@ -1,0 +1,54 @@
+
+#include<stdio.h>
+void Fix_misplaced_element(int a[],int n);
+int main()
+{
+   int a[20],i,n;
+   printf("enter the value of n");
+   scanf("%d",&n);
+   printf("enter the values of an array");
+   for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+   Fix_misplaced_element(a,n);
+   return 0;
+}
+void Fix_misplaced_elements(int a[],int n)
+{
+   int i,j,k,temp,count=0;
+   for(i=0;i<n;i++)
+   {
+     if(a[i]<a[i+1])
+        continue;
+     else 
+     {
+       j=i;
+       count=1;
+       break;
+     }
+    }
+    if(count==0)
+      printf("no modification");
+    else
+    {
+      for(i=n-1;i>=j;i--)
+      {
+      continue;
+        else 
+        if(a[i]>a[i-1])
+             {
+          k=i;
+          break;
+        }
+      }
+      a[k]=a[k]+a[j];
+      a[j]=a[k]-a[j];
+      a[k]=a[k]-a[j];
+
+    }
+    if(count==0)
+      printf("no modification");
+    for(i=0;i<n;i++)
+       printf("%d",a[i]);
+}    
+
+    

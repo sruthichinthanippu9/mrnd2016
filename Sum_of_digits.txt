@@ -1,0 +1,26 @@
+/*sum of number*/
+#include<stdio.h>
+void Sum_of_digits(int s);
+void main()
+{
+  int n;
+  printf("enter the number");
+  scanf("%d",&n);
+  Sum_of_digits(n);
+}
+void Sum_of_digits(int s)
+{
+  int k,l=0;
+  while(s)
+  {
+   k=s%10;
+   l=l+k;
+   s=s/10;
+  }
+  printf("%d",l);
+}
+
+   
+
+  
+

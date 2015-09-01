@@ -1,0 +1,46 @@
+/*find the given charster with given index*/
+#include<stdio.h>
+void Kth_last_element(char a[],int k);
+int main()
+{
+    char a[20];
+    int k;
+    printf("enter the sring");
+    scanf("%s",a);
+    printf("enter k");
+    scanf("%d",&k);
+   
+    if(k<=0)
+      printf("not proper index");
+    else
+    {
+     Kth_last_element(a,k);
+    }
+    return 0;
+}
+void Kth_last_element(char a[],int k)
+{
+    int flag=0,i,t,j;
+    for(i=0;a[i]!='\0';i++)
+    {
+        if(flag==0)
+        {
+            if(a[i+k]=='\0')
+            {
+            flag=1;
+            t=i;
+            
+            }
+        }
+    }
+    j=i;
+    
+    if(k<=j&&flag==1)
+     printf("%c",a[t]);
+    else
+      printf("no");
+}
+    
+    
+    
+

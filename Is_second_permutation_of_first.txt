@@ -1,0 +1,47 @@
+#include<stdio.h>
+int Is_second_permutation_of_first(char  s1[],char  s2[]);
+int  main()
+{
+  char  s1[20],s2[20];
+  int k,i,j;
+  printf("enter  the  s1");
+  scanf("%s",s1);
+  printf("enter s2" );
+  scanf("%s",s2);
+  for(i=0;s1[i]!='\0';i++);
+  for(j=0;s2[j]!=0;j++);
+  if(i!=j)
+    printf("uneequal length");
+   else
+   {
+       
+   
+   k= Is_second_permutation_of_first(s1,s2);
+   if(k==1)
+     printf("permutation");
+   else
+     printf("not a permutation");
+   } 
+   return 0;
+}
+int Is_second_permutation_of_first(char s1[],char s2[])
+{
+  int a[255],i;
+  for(i=0;i<255;i++)
+      a[255]=0;
+  for(i=0;s1[i]!='\0';i++)
+    a[s1[i]]=a[s1[i]]+1;
+  for(i=0;s2[i]!='\0';i++)
+  {
+    if(a[s2[i]]==0)
+    {
+     return 0;
+    }
+    else
+    {
+        a[s2[i]]=a[s2[i]]-1;
+    }
+  }
+  return 1;
+}  
+    

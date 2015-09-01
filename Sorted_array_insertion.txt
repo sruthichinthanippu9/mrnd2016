@@ -1,0 +1,44 @@
+/*insert in a sorted array*/
+#include<stdio.h>
+void Sorted_array_insert(int a[],int n,int k);
+void main()
+{
+ int a[20],n,k,i;
+ printf("enter the n value");
+ scanf("%d",&n);
+ printf("enter the values of an array");
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+ printf("enter k value"); 
+ Sorted_array_insert(a,n,k);
+}
+void Sorted_array_insert(int a[],int n,int k)
+{
+  int count1=1,i,j;
+
+  for(i=0;i<n;i++)
+  {
+   if(a[i]>=k)
+   {
+     count1=1;
+     for(j=n-1;j>=i;j++)
+     {
+       a[j]=a[j+1];
+     }
+     a[j]=k;
+     n++;
+     break;
+   }
+  }
+  if(count1==0)
+  {
+   a[i]=k;
+   n++;
+  }
+  for(i=0;i<n;i++)
+   printf("%d",a[i]);
+}      
+
+  
+
+
